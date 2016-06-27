@@ -16,3 +16,7 @@ git remote add origin https://github.com/yourusername/your-repo-name.git
 Once you have done that, git now knows about your remote repository. You can then tell it to push (which is "upload") your commited files:
 
 git push -u origin master
+
+
+
+this is how the git hub works !!!
