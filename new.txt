@@ -20,3 +20,28 @@ git push -u origin master
 
 
 this is how the git hub works !!!
+
+=============================================================
+Summary these above line that I will understand
+=============================================================
+
+0. Open Command prompt.
+
+1. Goto your project directory using terminal, that you want to upload on github repository.
+
+2. Run Command "git init".
+
+3. Now, add the files of the project that you want to upload.
+
+4. If you want to add all files of the local project directory, run command "git add ." .
+
+5. git commit -m "adding files"
+	Name the changes takes place to the github repository
+
+6. Now set the origin: means bind the local project repository to the github repository
+	git remote add origin https://github.com/yourusername/your-repo-name.git
+
+7. Once the remote origin is set run this command to upload the local changes to the github repository.
+	git push -u origin master
+
+=============================================================
