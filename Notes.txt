@@ -1,0 +1,77 @@
+Project Structure
+==================
+
+/src/index.html
+----------------
+For your app to function, Ionic looks for the <ion-app> tag in your HTML
+
+build/main.js 
+-------------
+is a concatenated file containing Ionic, Angular and your app’s JavaScript.
+
+./src/
+-------
+contains uncompiled code, where most of the work for an Ionic app.
+
+When we run ionic serve, our code inside of src/ is transpiled into the correct Javascript version that the browser understands (currently, ES5). That means we can work at a higher level using TypeScript, but compile down to the older form of Javascript the browser needs.
+
+src/app/app.module.ts
+----------------------
+This is the entry point for our app.
+
+This is a root module that essentially controls the rest of the application.
+
+In this module, we’re setting the root component to 'MyApp', in src/app/app.component.ts.
+
+This is the first component that gets loaded in our app.
+
+app.component.ts
+----------------
+we’re setting our template to src/app/app.html
+
+src/app/app.html
+-----------------
+<ion-nav> component to act as the main content area.
+
+“root” page for the ion-nav component. When ion-nav loads, the component referenced by the variable 'rootPage' will be the root page.
+
+rootPage is set to TabsPage.TabsPage will be the first page loaded in the nav controller
+
+tab.ts
+-------
+@Component({
+  selector: 'page-hello-ionic',
+  templateUrl: 'hello-ionic.html'
+})
+
+selector is useful in order to override the css
+
+All pages have both a class, and an associated template that’s being compiled as well.
+
+Creating Additional Pages
+==========================
+src/pages/list/list.ts
+-----------------------
+import {NavController, NavParams} from 'ionic-angular'; ==> //component used to navigation between the pages
+
+Components
+===========
+Ionic apps are made of high-level building blocks called components. Components allow you to quickly construct an interface for your app.
+
+Eg. Action Sheets, alerts, cards, etc,.
+
+import { ActionSheetController } from 'ionic-angular'; ==> importing Action Sheets components
+
+use
+
+constructor(public actionSheetCtrl: ActionSheetController) {
+	this.actionSheetCtrl.create({
+      title: 'Modify your album'
+    }).present();
+}
+
+==============================================================
+main.ts (starting point) -> Bootstrap 'AppModule' => 
+app.module.ts -> Import root as well as all component in app (mainly set the root component) =>
+app.component.ts -> starting component of the app, set our app's first template
+==============================================================
