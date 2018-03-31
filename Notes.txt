@@ -75,3 +75,8 @@ main.ts (starting point) -> Bootstrap 'AppModule' =>
 app.module.ts -> Import root as well as all component in app (mainly set the root component) =>
 app.component.ts -> starting component of the app, set our app's first template
 ==============================================================
+
+
+run chrome with disabled all security
+------------------------------------
+chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
