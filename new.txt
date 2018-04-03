@@ -50,3 +50,17 @@ Remove folder from git repository
 1. git rm -r <directory-name>
 2. git commit -m "Remove duplicated"
 3. git push origin master
+
+===========
+Don't play without branch
+===========
+1. create a new branch
+	git checkout -b "hello-in"
+2. List all existing branch and show active branch
+	git branch
+3. switch between branch
+	git checkout hello-in
+4. push all changes to the active branch
+	git push origin hello-in
+
+Note: "hello-in" is the branch name, please name your branch whatever you want.
