@@ -80,3 +80,16 @@ app.component.ts -> starting component of the app, set our app's first template
 run chrome with disabled all security
 ------------------------------------
 chrome.exe --user-data-dir="C:/Chrome dev session" --disable-web-security
+
+horizontal-scroll
+------------------
+.horizontal-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 8px;
+}
+.horizontal-scroll div.card {
+    display: inline-block;
+    vertical-align: middle;
+}
